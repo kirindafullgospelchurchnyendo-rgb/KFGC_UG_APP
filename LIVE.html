@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.A.Q - KFGC+</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('image1.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+         /* Fixed Header */
+           .header {
+            background-color: purple;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            left:0;
+        }
+
+ .logo img {
+            height: 70px;
+        }
+ /* Learn More Hidden Section */
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        
+        /* Scrollable Sections */
+        .slider-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            width: 100%;
+            height: auto;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+            scroll-snap-align: start;
+            text-align: center;
+            padding: 50px;
+            background: url('path/to/your/slide-background.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #E75C26;
+        }
+        p {
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #E75C26;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* YouTube Video Styling */
+        .youtube-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 65%;
+            height: 190px;
+        }
+
+                /* Fixed Footer */
+       .footer {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left:0;
+            height:70px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Scroll Bar Styling */
+        .slider-container::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .slider-container::-webkit-scrollbar-thumb {
+            background: PINK;
+            border-radius: 10px;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: #E75C26;
+        }
+    .back-button {
+            position: absolute;
+            left: 6px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="logo">
+            <img src="kfgc.jpg" alt="Church Logo">
+       </div>
+      
+    </header> 
+
+    <!-- Scrollable Sections -->
+    <div class="slider-container" id="slider">
+    <!-- Slide 1 - YouTube Videos -->
+        <div class="slide">
+            <h1>Watch Our Latest Videos</h1>
+            <p>Stay connected with our church through our latest messages, worship sessions, and live streams.</p>
+ <a href="#" class="btn" onclick="toggleMoreDetails(event)">More Details</a>
+            
+         <!-- Hidden Content -->
+            
+            <div id="MoreDetailsContent" class="hidden-content">
+                <p>
+                    We invite you to be part of our journey in faith. At KFGC+, we focus on spiritual growth, 
+                    community service, and fostering love among believers. Join us for our weekly services, 
+                    Bible studies, and special events designed to uplift and inspire.
+                </p>
+            </div>
+        
+            <div class="youtube-container">
+                <!-- Live Stream Embed -->
+                <iframe src="https://www.youtube.com/embed/live_stream?channel=KIRINDAFULLGOSPELCHURCHNYENDO" allowfullscreen></iframe>
+
+                <!-- Latest YouTube Video -->
+                <div id="videos"></div>
+            </div>
+            </div>
+ <!-- Slide 2 -->
+        <div class="slide">
+            <h1>Our Mission</h1>
+            <p>From humble beginnings, our mission has been to be a beacon of hope, embodying the teachings 
+                of Jesus through worship, service, and connection.</p>
+            
+            <a href="#" class="btn" onclick="toggleReadMore(event)">Read More</a>
+
+<!-- Hidden Content -->
+            <div id="ReadMoreContent" class="hidden-content">
+                <p>
+                    We invite you to be part of our journey in faith. At KFGC+, we focus on spiritual growth, 
+                    community service, and fostering love among believers. Join us for our weekly services, 
+                    Bible studies, and special events designed to uplift and inspire.
+                </p>
+                
+                <p>
+                    We invite you to be part of our journey in faith. At KFGC+, we focus on spiritual growth, 
+                    community service, and fostering love among believers. Join us for our weekly services, 
+                    Bible studies, and special events designed to uplift and inspire.
+                </p>
+                <p>
+                    We invite you to be part of our journey in faith. At KFGC+, we focus on spiritual growth, 
+                    community service, and fostering love among believers. Join us for our weekly services, 
+                    Bible studies, and special events designed to uplift and inspire.
+                </p>
+        </div>
+        </div>
+
+ <!-- Slide 3 -->
+        <div class="slide">
+            <h1>Welcome to KFGC MEDIA APP</h1>
+            <p>Our church is a welcoming community rooted in the love of Christ. We aim to build a vibrant 
+                spiritual family where everyone can grow in faith.</p>        
+            <a href="#" class="btn" onclick="toggleLearnMore(event)">Learn More</a>
+           
+<!-- Hidden Content -->
+            <div id="learnMoreContent" class="hidden-content">
+                <p>
+                    We invite you to be part of our journey in faith. At KFGC+, we focus on spiritual growth, 
+                    community service, and fostering love among believers. Join us for our weekly services, 
+                    Bible studies, and special events designed to uplift and inspire.
+                </p>
+         </div>
+        </div>
+<!-- Dots Indicator -->
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    </div>
+
+    
+<!-- Dots Indicator -->
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+     <!-- Footer -->
+    <footer class="footer">
+         <p>Follow us on 
+            <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           
+        </p>
+         <p>&copy; 2025 KFGC MEDIA APP. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+    function toggleLearnMore(event) {
+            event.preventDefault();
+            let content = document.getElementById("learnMoreContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+    
+    function toggleReadMore(event) {
+            event.preventDefault();
+            let content = document.getElementById("ReadMoreContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+    function toggleMoreDetails(event) {
+            event.preventDefault();
+            let content = document.getElementById("MoreDetailsContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+
+        const API_KEY = "YOUR_YOUTUBE_API_KEY"; // Replace with your actual YouTube API key
+        const CHANNEL_ID = "KIRINDAFULLGOSPELCHURCHNYENDO";  // Your church's YouTube channel ID
+        const videoContainer = document.getElementById("videos");
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('.dot');
+
+        // Fetch latest video from YouTube
+        fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.items.length > 0) {
+                    const videoId = data.items[0].id.videoId;
+                    videoContainer.innerHTML = `
+                        <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+                    `;
+                }
+            })
+            .catch(error => console.log("Error fetching YouTube videos:", error));
+
+        // Scroll indicator for dots
+        slider.addEventListener('scroll', () => {
+            let scrollLeft = slider.scrollLeft;
+            let width = slider.offsetWidth;
+            let index = Math.round(scrollLeft / width);
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        });
+    </script>
+
+</body>
+</html>

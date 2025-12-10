@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kirinda Full Gospel Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding-top: 70px; /* Add space for fixed header */
+            padding-bottom: 60px; /* Add space for fixed footer */
+        }
+/* Fixed Header */
+           .header {
+            background-color: purple;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            left:0;
+        }
+
+ .logo img {
+            height: 70px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 20px;
+            margin-top: 50px; /* Adjust for fixed header */
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #e66922;
+            margin: 10px auto;
+        }
+
+        .map-container {
+            margin: 20px 0;
+        }
+
+        .contact-info, .social-media, .contact-form {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .contact-info p, .social-media a {
+            font-size: 18px;
+            color: #e66922;
+        }
+
+        /* Contact Form */
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #e66922;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 12px;
+        }
+
+        
+ /* Fixed Footer */
+       .footer {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left:0;
+            height:70px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        .back-button {
+            position: absolute;
+            left: 10px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Header -->
+    <header class="header">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="logo">
+            <img src="kfgc.jpg" alt="Church Logo">
+       </div>
+      
+    </header>      
+<main>
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>LOCATION</h1> 
+        <hr class="divider">
+
+      
+           <div class="map-container">
+               
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15905.236076123084!2d31.7132!3d-0.3331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d8f5d9f0e2a3f%3A0xf08a2d3e3f7a2b!2sKirinda%20Full%20Gospel%20Church%20Nyendo!5e0!3m2!1sen!2sug!4v1713341736000!5m2!1sen!2sug" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</div>
+        </div>
+
+        <div class="contact-info">
+            <h1>CONTACT US</h1>
+            <hr class="divider">
+            <h2>Email</h2>
+            <!-- Clickable email link -->
+            <p><a href="mailto:kirindafullgospelchurchnyendo@gmail.com">kirindafullgospelchurchnyendo@gmail.com</a></p>
+
+            <h2>Contact Info</h2>
+            <!-- Clickable phone number to initiate a call -->
+            <p><a href="tel:+256758606845">+256 758606845</a>  </p>
+        <p><a href="tel:+256782570361">+256 782570361</a> - PASTOR/REV. JOSEPH LWANYAAGA</p>
+
+            <h2>Address</h2>
+            <p>KIRINDA FULL GOSPEL CHURCH NYENDO</p>
+            <p>Mon-Sun - 08:00 - 19:00</p>
+        </div>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+              <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           <a href="#">Imo</a> |   
+        </div>
+
+        <div class="contact-form">
+            <h2>How may we help you?</h2>
+            <!-- Form submission will open the user's email client with a pre-filled email -->
+            <form action="mailto:kirindafullgospelchurchnyendo@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="email" name="email" placeholder="Email address" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
+   <!-- Footer -->
+    <footer class="footer">
+         <p>Follow us on 
+            <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           
+        </p>
+         <p>&copy; 2025 KFGC MEDIA APP. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

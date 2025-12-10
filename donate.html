@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Kirinda Full Gospel Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        /* Fixed Header */
+           .header {
+            background-color: purple;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            left:0;
+        }
+
+ .logo img {
+            height: 70px;
+        }
+  
+        /* Fixed Footer */
+       .footer {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left:0;
+            height:70px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Donation Section */
+        .donation-container {
+            margin: 100px auto 80px; /* Adjust for header & footer */
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .donation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .donation-form input, 
+        .donation-form select, 
+        .donation-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .donation-form button {
+            background-color: #e66922;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Payment Options */
+        .payment-options img {
+            width: 50px;
+            margin: 10px;
+        }
+
+        /* Recent Donations */
+        .recent-donations {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            width: 150px;
+            margin-top: 10px;
+        }
+     .back-button {
+            position: absolute;
+            left: 6px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <header class="header">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="logo">
+            <img src="kfgc.jpg" alt="Church Logo">
+       </div>
+      
+    </header>      
+
+    <!-- Donation Section -->
+    <div class="donation-container">
+        <h2>Make a Donation</h2>
+        <form class="donation-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="donation-type" required>
+                <option value="" disabled selected>Select Donation Type</option>
+                <option value="tithe">Tithe</option>
+                <option value="offering">Offering</option>
+                <option value="seed">Seed</option>
+                <option value="custom">Other</option>
+            </select>
+            <input type="number" name="amount" placeholder="Amount (UGX)" required>
+            
+            <h3>Payment Method</h3>
+            <div class="payment-options">
+                <img src="momo.jpg" alt="Mobile Money">
+                <img src="credit card.jpg" alt="Credit Card">
+                <img src="paypal.jpg" alt="PayPal">
+            </div>
+
+            <button type="submit">Donate Now</button>
+        </form>
+
+        <!-- QR Code for Easy Payment -->
+        <div class="qr-code">
+            <h3>Scan to Donate</h3>
+            <img src="qr.jpg" alt="QR Code">
+        </div>
+
+        <!-- Recent Donations -->
+        <div class="recent-donations">
+            <h3>Recent Donations</h3>
+            <p>John Doe - UGX 50,000</p>
+            <p>Mary A. - UGX 30,000</p>
+            <p>Anonymous - UGX 100,000</p>
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="footer">
+         <p>Follow us on 
+            <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           
+        </p>
+         <p>&copy; 2025 KFGC MEDIA APP. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

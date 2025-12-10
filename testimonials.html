@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Kirinda Full Gospel Church</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+     /* Fixed Header */
+           .header {
+            background-color: purple;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            left:0;
+        }
+   .logo img {
+            height: 70px;
+        }
+
+        /* Fixed Footer */
+       .footer {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left:0;
+            height:70px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h {
+            color: orange;
+            background-color: blue;
+            font-weight: bold;
+        }
+
+        body {
+           margin-top: 55px;
+            background-color: #e0f7fa; /* Light blue background */
+        }
+        .testimonial-card {
+           
+            margin-bottom: 5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            background-color: white;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .testimonial-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .testimonial-message {
+            font-size: 16px;
+            color: red;
+        }
+        .testimonial-form {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+        .testimonial-form textarea {
+            width: 100%;
+            height: 70px;
+        }
+        .testimonial-form button {
+            margin-top: 10px;
+        }
+        .testimonial-form input[type="file"] {
+            margin-top: 5px;
+        }
+     .back-button {
+            position: absolute;
+            left: 10px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+ <!-- Header -->
+    <header class="header">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="logo">
+            <img src="kfgc.jpg" alt="Church Logo">
+       </div>
+      
+    </header>
+<div class="container mt-4">
+    <!-- Page Header -->
+       <h>  MEMBER TESTIMONIALS</h>
+
+    <div class="text-center">
+        <h2>Member Testimonials</h2>
+        <p>Hear what our members have to say about their journey with Kirinda Full Gospel Church.</p>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="row">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="joe.jpg" alt="Member 1" class="img-fluid">
+                    <div>
+                        <h5>John Doe</h5>
+                        <p>Member since: January 2020</p>
+                    </div>
+                </div>
+                <p class="testimonial-message">"The church has been a great place for spiritual growth. I have learned so much, and I’m grateful for the amazing community here."</p>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="jane.jpg" alt="Member 2" class="img-fluid">
+                    <div>
+                        <h5>Jane Smith</h5>
+                        <p>Member since: February 2021</p>
+                    </div>
+                </div>
+                <p class="testimonial-message">"Joining the church has brought peace and joy to my life. The services are always uplifting, and the fellowship is truly special."</p>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="mary.jpg" alt="Member 3" class="img-fluid">
+                    <div>
+                        <h5>Mary Johnson</h5>
+                        <p>Member since: March 2022</p>
+                    </div>
+                </div>
+                <p class="testimonial-message">"I found a true sense of belonging here. I am thankful for the support I’ve received through the church’s ministries."</p>
+            </div>
+        </div>
+    
+
+    <!-- Submit Testimonial Form -->
+    <div class="testimonial-form">
+        <h5>Submit Your Testimonial</h5>
+        <form id="testimonial-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="member-name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="member-name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="testimonial-message" class="form-label">Your Testimonial</label>
+                <textarea class="form-control" id="testimonial-message" placeholder="Share your experience here..." required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="testimonial-image" class="form-label">Upload an Image (Optional)</label>
+                <input type="file" class="form-control" id="testimonial-image" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+        </form>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+         <p>Follow us on 
+            <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           
+        </p>
+         <p>&copy; 2025 KFGC MEDIA APP. All Rights Reserved.</p>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Handle the testimonial form submission
+    document.getElementById('testimonial-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('member-name').value;
+        const message = document.getElementById('testimonial-message').value;
+        const image = document.getElementById('testimonial-image').files[0];
+
+        if (name && message) {
+            alert('Thank you for your testimonial!');
+            document.getElementById('testimonial-form').reset();
+        } else {
+            alert('Please fill in all the fields.');
+        }
+    });
+</script>
+</body>
+</html>

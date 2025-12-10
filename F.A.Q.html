@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.A.Q - KFGC+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('image1.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+/* --- FAQ Section --- */
+.faq-container { max-width:900px; margin:50px auto; padding:0 20px; }
+.faq-container h2 { text-align:center; margin-bottom:30px; color:#4b7bec; }
+.faq-search { text-align:center; margin-bottom:30px; }
+.faq-search input { padding:10px; width:80%; max-width:400px; border-radius:5px; border:1px solid #ccc; }
+
+.faq-item { background:white; border-radius:10px; margin-bottom:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; transition: all 0.3s; }
+.faq-item button { width:100%; padding:15px 20px; text-align:left; font-size:1rem; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+.faq-item button:hover { background:#f0f0f0; }
+.faq-item .answer { padding:15px 20px; display:none; border-top:1px solid #ccc; }
+.faq-item.active .answer { display:block; }
+.faq-item button i { transition: transform 0.3s; }
+.faq-item.active button i { transform: rotate(180deg); }
+
+/* --- Footer --- */
+footer { background:#222; color:white; text-align:center; padding:30px 20px; margin-top:50px; }
+footer a { color:#ffd700; margin:0 10px; }
+
+/* --- Dark Theme --- */
+.dark .faq-item { background:#333; color:#f9f9f9; box-shadow:0 4px 8px rgba(255,255,255,0.1); }
+.dark .faq-item .answer { border-top:1px solid #555; }
+.dark .faq-search input { background:#444; color:#f9f9f9; border:1px solid #555; }
+    
+         /* Fixed Header */
+           .header {
+            background-color: purple;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            left:0;
+               
+        }
+.theme-toggle { position:absolute; top:20px; right:50px; cursor:pointer; font-size:1.5rem; }
+
+ .logo img {
+            height: 70px;
+        }
+ 
+    .back-button {
+            position: absolute;
+            left: 6px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .footer {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left:0;
+            height:70px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    /* --- Dark Theme --- */
+.dark .faq-item { background:#333; color:#f9f9f9; box-shadow:0 4px 8px rgba(255,255,255,0.1); }
+.dark .faq-item .answer { border-top:1px solid #555; }
+.dark .faq-search input { background:#444; color:#f9f9f9; border:1px solid #555; }
+
+    </style>
+    
+    <section class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-search">
+        <input type="text" id="faqSearch" placeholder="Search questions...">
+    </div>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button><span>How do I download the KFGC Media App?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">You can download the app from the Google Play Store for Android or the Apple App Store for iOS. Search for "KFGC Media App" and tap install.</div>
+        </div>
+
+        <div class="faq-item">
+            <button><span>Is the app free to use?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">Yes, the app is completely free for all users. Some premium content may require registration or a subscription.</div>
+        </div>
+
+        <div class="faq-item">
+            <button><span>How can I watch live services?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">Live services can be accessed directly from the "Live" section in the app. Notifications will alert you when a service starts.</div>
+        </div>
+
+        <div class="faq-item">
+            <button><span>How do I create an account?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">Click on the "Sign Up" button in the app, provide your email, and create a password. You'll receive a confirmation email to activate your account.</div>
+        </div>
+
+        <div class="faq-item">
+            <button><span>Can I download videos to watch offline?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">Yes, select the video you want to download and tap the download icon. It will be available in your offline library.</div>
+        </div>
+
+        <div class="faq-item">
+            <button><span>Who do I contact for support?</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="answer">For support, email support@kfgcmedia.com or use the "Help" section in the app to submit a ticket.</div>
+        </div>
+    </div>
+</section>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="logo">
+            <img src="kfgc.jpg" alt="Church Logo">    
+       </div>
+        <div>
+        <i class="fas fa-moon theme-toggle" id="themeToggle" title="Toggle Dark/Light"></i>
+        </div>
+    </header> 
+
+   
+
+     <!-- Footer -->
+    <footer class="footer">
+         <p>Follow us on 
+            <a href="https://whatsapp.com/channel/0029VaoQRhnHwXb9FX0Ub503">WhatsApp</a>|
+            <a href="https://www.youtube.com/@KIRINDAFULLGOSPELCHURCHNYENDO">Youtube</a>|
+            <a href="#">Facebook</a> | 
+            <a href="https://t.me/+wJRnn7SQvehhZTFk">Telegram</a> | 
+             <a href="www.tiktok.com/@kirindafullgospel">Tiktok</a>|
+           
+        </p>
+         <p>&copy; 2025 KFGC MEDIA APP. All Rights Reserved.</p>
+    </footer>
+<script>
+// --- FAQ Collapse ---
+const faqItems=document.querySelectorAll('.faq-item button');
+faqItems.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        const parent=btn.parentElement;
+        parent.classList.toggle('active');
+    });
+});
+
+// --- Search FAQ ---
+const faqSearch=document.getElementById('faqSearch');
+faqSearch.addEventListener('input',()=>{
+    const filter=faqSearch.value.toLowerCase();
+    document.querySelectorAll('.faq-item').forEach(item=>{
+        const question=item.querySelector('button span').textContent.toLowerCase();
+        item.style.display=question.includes(filter)?'block':'none';
+    });
+});
+
+// --- Theme Toggle ---
+document.getElementById('themeToggle').addEventListener('click',()=>document.body.classList.toggle('dark'));
+</script>
+    <script>
+    function toggleLearnMore(event) {
+            event.preventDefault();
+            let content = document.getElementById("learnMoreContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+    
+    function toggleReadMore(event) {
+            event.preventDefault();
+            let content = document.getElementById("ReadMoreContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+    function toggleMoreDetails(event) {
+            event.preventDefault();
+            let content = document.getElementById("MoreDetailsContent");
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+
+        const API_KEY = "YOUR_YOUTUBE_API_KEY"; // Replace with your actual YouTube API key
+        const CHANNEL_ID = "KIRINDAFULLGOSPELCHURCHNYENDO";  // Your church's YouTube channel ID
+        const videoContainer = document.getElementById("videos");
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('.dot');
+
+        // Fetch latest video from YouTube
+        fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.items.length > 0) {
+                    const videoId = data.items[0].id.videoId;
+                    videoContainer.innerHTML = `
+                        <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+                    `;
+                }
+            })
+            .catch(error => console.log("Error fetching YouTube videos:", error));
+
+        // Scroll indicator for dots
+        slider.addEventListener('scroll', () => {
+            let scrollLeft = slider.scrollLeft;
+            let width = slider.offsetWidth;
+            let index = Math.round(scrollLeft / width);
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        });
+    </script>
+
+</body>
+</html>

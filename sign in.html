@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Background Image -->
+    <div class="background"></div> 
+    
+        <!-- Image Slider Section -->
+    <div class="slider-container">
+        <div class="slider">
+           
+            <!-- Slide 2 -->
+            <div class="slide">
+                
+                <h2>Worship Together</h2>
+                <p>Experience powerful worship sessions and draw closer to God through collective praise.</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                
+                <h2>Bible Study & Prayer</h2>
+                <p>Deepen your understanding of scripture and stay spiritually connected through daily prayers.</p>
+            </div>
+        </div>
+
+        
+
+       <!-- Signup Form -->
+
+<form id="signup-form">
+    <input type="email" id="signup-email" placeholder="Email" required />
+    <input type="password" id="signup-password" placeholder="Password" required />
+    <button type="submit">Sign Up</button>
+    Already have an account
+     <a href="login.html">Login</a>
+</form>
+
+    <style>
+       
+/* Background Image */
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+
+         
+               /* Slider Section */
+        .slider-container {
+            width: 1000px;
+            max-width: 1000px;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 30PX 20PX 30PX;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+       
+        .slide h2 {
+            margin-top: 20px;
+            font-size: 22px;
+            color: yellow;
+        }
+
+        .slide p {
+            margin-top: 10px;
+            font-size: 22px;
+            color: white;
+        }
+
+
+
+
+ form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+
+input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007BFF;
+    color: rgb(181, 211, 9);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+
+    <script>
+        // Background Image Auto-Change
+        const images = [
+            'image1.jpg',
+            'image2.jpg',
+            'image3.jpg'
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
+            index = (index + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 5000); // Change background every 5 seconds
+        changeBackground();
+    </script>
+
+<script>
+document.getElementById('signup-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+
+    const response = await fetch('/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, email, password })
+    });
+
+    if (response.ok) {
+        alert('Signup successful!');
+    } else {
+        alert('Signup failed!');
+    }
+});
+</script>
+</body>
+</html>
